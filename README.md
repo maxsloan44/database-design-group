@@ -1,2 +1,3 @@
-# database-design-group
-Fall 2024 Database Design Group Project Repository
+# Fall 2024 Database Design Project
+
+GitHub Repository for Max, Henry, & Cass's group project
