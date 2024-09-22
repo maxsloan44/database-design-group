@@ -1,0 +1,59 @@
+@startuml
+entity "Product" as Product {
+  +product_id: Integer <<PK>>
+  --
+  product_name: String
+  category: String
+  price: Decimal
+  quantity_in_stock: Integer
+  supplier_id: Integer <<FK>>
+}
+
+entity "Supplier" as Supplier {
+  +supplier_id: Integer <<PK>>
+  --
+  supplier_name: String
+  contact_info: String
+}
+
+entity "Order" as Order {
+  +order_id: Integer <<PK>>
+  --
+  order_date: Date
+  supplier_id: Integer <<FK>>
+  total_amount: Decimal
+}
+
+entity "Order Detail" as OrderDetail {
+  +detail_id: Integer <<PK>>
+  --
+  order_id: Integer <<FK>>
+  product_id: Integer <<FK>>
+  quantity_ordered: Integer
+  price_at_order_time: Decimal
+}
+
+entity "User" as User {
+  +user_id: Integer <<PK>>
+  --
+  username: String
+  password: String
+  role: String
+  contact_info: String
+}
+
+entity "Inventory Report" as InventoryReport {
+  +report_id: Integer <<PK>>
+  --
+  report_date: Date
+  report_data: Text
+}
+
+' Relationships
+Product }|--|| Supplier: "Supplied by"    // One Product is supplied by one Supplier.
+Product ||--o{ OrderDetail: "Part of"    // One Product can be part of many OrderDetails.
+Order ||--o{ OrderDetail: "Contains"     // One Order can contain many OrderDetails.
+Order }|--|| Supplier: "Placed with"      // One Order is placed with one Supplier.
+User ||--o{ InventoryReport: "Generates" // One User can generate many InventoryReports.
+User ||--o{ Order: "Creates/Manages"     // One User can create/manage many Orders.
+@enduml
