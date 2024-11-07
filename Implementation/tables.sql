@@ -15,6 +15,7 @@ CREATE TABLE OrderDetails (
 	price_at_order_time DECIMAL,
 	FOREIGN KEY (order_id) REFERENCES Orders(order_id),
 	FOREIGN KEY (product_id) REFERENCES Products(product_id)
+);
 
 -- Table made by Max
 CREATE TABLE Suppliers (
