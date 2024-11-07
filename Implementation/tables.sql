@@ -32,3 +32,19 @@ CREATE TABLE OrderDetails (
 	FOREIGN KEY (order_id) REFERENCES Orders(order_id),
 	FOREIGN KEY (product_id) REFERENCES Products(product_id)
 );
+
+-- Table made by Cass
+CREATE TABLE InventoryReport (
+	report_id INT PRIMARY KEY,
+	report_date DATE,
+	report_data varchar(255)
+);
+
+--Table made by Cass
+CREATE TABLE User (
+	user_id INT PRIMARY KEY,
+	username varchar(255),
+	password varchar(255),
+	role varchar(255),
+	contact_info varchar(255)
+);
