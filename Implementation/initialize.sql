@@ -64,15 +64,3 @@ CREATE TABLE `InventoryReport` (
   FOREIGN KEY (`user_id`) REFERENCES `User`(`user_id`)
 );
 
--- Initial insertions to Supplier
-
--- Initial insertions to Product
-
--- Initial insertions to User
-
--- Initial insertions to Order
-
--- Initial insertions to OrderDetail
-
--- Initial insertions to InventoryReport
-
