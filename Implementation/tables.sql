@@ -63,4 +63,3 @@ CREATE TABLE `InventoryReport` (
   `user_id` INT,
   FOREIGN KEY (`user_id`) REFERENCES `User`(`user_id`)
 );
-
