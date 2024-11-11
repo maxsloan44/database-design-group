@@ -1,7 +1,7 @@
--- Specify the database name directly
+-- Specify the database name
 USE inventory_management;
 
--- Drop users if they already exist (optional but prevents conflicts)
+-- Drop users if they already exist
 DROP USER IF EXISTS 'admin_user'@'localhost';
 DROP USER IF EXISTS 'manager_user'@'localhost';
 DROP USER IF EXISTS 'employee_user'@'localhost';
