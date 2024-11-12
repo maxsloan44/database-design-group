@@ -7,10 +7,10 @@ INSERT INTO `Supplier` (supplier_name, contact_info) VALUES
 -- Insert sample data into Product
 INSERT INTO `Product` (product_name, category, price, quantity_in_stock, supplier_id) VALUES
   ('Laptop', 'Electronics', 799.99, 50, 1),
-  ('Office Chair', 'Furniture', 149.99, 200, 2),
+  ('Office Chair', 'Furniture', 149.99, 7, 2),
   ('Desk Organizer', 'Office Supplies', 19.99, 500, 3),
-  ('Monitor', 'Electronics', 199.99, 75, 1),
-  ('Printer Paper', 'Office Supplies', 9.99, 1000, 3);
+  ('Monitor', 'Electronics', 199.99, 5, 1),
+  ('Printer Paper', 'Office Supplies', 9.99, 700, 3);
 
 -- Insert sample data into User
 INSERT INTO `User` (username, password, role, contact_info) VALUES
